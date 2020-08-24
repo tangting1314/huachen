@@ -18,7 +18,7 @@ npm run build
 npm run build --report
 
 >cnpm i element-ui -S
-
+npm install axios --save
 
 ```
 
