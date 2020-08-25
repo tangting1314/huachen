@@ -18,6 +18,20 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
+
+
+  axios.interceptors.request.use(
+    config => {
+       /* var token = '63350a93c8c70c91bff9c8140d7c9c56'
+        if (token) {
+            config.headers.token = `${token}`
+        } */
+        return config
+    },
+    err => {
+        return Promise.reject(err)
+    })
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -25,3 +39,16 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+
+//请求返回拦截，把数据返回到页面之前做些什么...
+axios.interceptors.response.use((response) => {
+  if (response.data.code == -2) {
+  
+
+  }else{
+    return response;
+
+  }
+
+});
