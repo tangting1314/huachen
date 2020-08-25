@@ -19,8 +19,7 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false
 
 
-
-  axios.interceptors.request.use(
+ axios.interceptors.request.use(
     config => {
        /* var token = '63350a93c8c70c91bff9c8140d7c9c56'
         if (token) {
